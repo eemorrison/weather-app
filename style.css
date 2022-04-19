@@ -1,6 +1,25 @@
+.weather-app {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 10px;
+    border: 1px solid #b4b4b4 ;
+    border-radius: 20px;
+    
+}
+
+. btn-primary {
+    color: #8064e9;
+}
+
+
 h1 {
     text-align: center;
     font-family: "Montserrat",sans-serif ;
+}
+.degree {
+    text-align: center;
+    font-size: large;
+    
 }
 
 h2 {
@@ -20,4 +39,12 @@ p {
 h6 {
     font-family: "Montserrat", sans-serif;
     color: gray;
+}
+.openSource {
+        font-family: "Montserrat",
+        sans-serif;
+        color: gray;
+}
+.sourceLink {
+    color:#8064e9 ;
 }
