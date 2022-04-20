@@ -7,33 +7,52 @@
     
 }
 
-. btn-primary {
-    color: #8064e9;
+.weather-app-wrapper {
+    max-width: 600px;
+    margin: 40px auto;
 }
+
+
 
 
 h1 {
     text-align: center;
     font-family: "Montserrat",sans-serif ;
 }
-.degree {
-    text-align: center;
-    font-size: large;
-    
-}
+
+
 
 h2 {
     font-family: "Montserrat", sans-serif;
     text-align: center;
+    padding: 10px;
+    
+}
+h2 strong {
+    font-size: 1.2em;
+}
+h2 small {
+    font-size: medium;
+    text-decoration: none;
+    
+}
+.fahrenheit {
+    text-decoration: none;
+    color: #8064e9;
+}
+.description {
+    text-transform: capitalize;
 }
 
 p {
     font-family: "Montserrat", sans-serif;
     color: gray;
+    
 }
 
 .col {
     font-family: "Montserrat", sans-serif;
+    padding: 10px;
 }
 
 h6 {
@@ -47,4 +66,5 @@ h6 {
 }
 .sourceLink {
     color:#8064e9 ;
+    text-decoration: none
 }

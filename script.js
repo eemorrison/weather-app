@@ -26,16 +26,19 @@ function displayWeatherCondition(response) {
     console.log(response.data.name);
     document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
+    descriptionElement.innerHTML = response.data.weather[0].description;
 
-    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-    document.querySelector("#wind").innerHTML = Math.round( response.data.wind.speed);
-
+humidityElement.innerHTML = response.data.main.humidity;
+    windElement.innerHTML =  Math.round(response.data.wind.speed);
 }
 
 function search(event) {
     event.preventDefault();
     let apiKey = "b43108b2ba2aeeb8574bda790a0d6057" ;
     let city = document.querySelector("#city-input").value;
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidityElement");
+    let windElement = document.querySelector("#windElement");
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayWeatherCondition);
 

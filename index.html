@@ -24,64 +24,68 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <nav class="navbar navbar-light bg-light">
-          <div class="container-fluid">
-            <form class="search-form" id="search-form">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                id="city-input"
-              />
-              <button class="btn btn-primary" type="submit">Search</button>
-            </form>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <form class="search-form" id="search-form">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search City"
+                  aria-label="Search"
+                  id="city-input"
+                />
+                <button class="btn btn-primary" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+          <h1 id="city">
+            <i class="fa-solid fa-cloud-rain"></i>
+            Huntsville
+          </h1>
+          <h2 id="temperature">
+            °<strong>15</strong>
+            <small>°C| <a href="#" class="fahrenheit">°F</a></small>
+          </h2>
+          <br />
+          <h6 id="date">Wednesday 12:23</h6>
+          <p id="descriptionElement" class="description">Raining</p>
+          <p>Wind: <span id="windElement"> 7 </span> mph</p>
+          <p>Humidity : <span id="humidityElement"> 77</span>%</p>
+          <div class="container">
+            <div class="row align-items-start">
+              <div class="col">
+                <i class="fa-solid fa-cloud"></i>
+                <br />
+                Tues <br />
+                55°
+              </div>
+              <div class="col">
+                <i class="fa-solid fa-cloud"></i>
+                <br />
+                Wed <br />
+                55°
+              </div>
+              <div class="col">
+                <i class="fa-solid fa-cloud"></i> <br />
+                Thurs <br />
+                68°
+              </div>
+              <div class="col">
+                <i class="fa-solid fa-cloud-rain"></i> <br />
+                Fri <br />
+                67°
+              </div>
+              <div class="col">
+                <i class="fa-solid fa-sun"></i> <br />
+                Sat <br />
+                37°
+              </div>
+            </div>
           </div>
-        </nav>
-        <h1 id="city">
-          <i class="fa-solid fa-cloud-rain"></i>
-          Huntsville
-        </h1>
-        <h2 id="temperature">
-          <strong>15°</strong> <small class="degree"> °c|°f</small>
-        </h2>
-        <br />
-        <h6 id="date">Wednesday 12:23</h6>
-        <p>Wind: <span id="wind"> 7 mph </span></p>
-        <p>Humidity : <span id="humidity"> 77</span></p>
-        <div class="container">
-          <div class="row align-items-start">
-            <div class="col">
-              <i class="fa-solid fa-cloud"></i>
-              <br />
-              Tues <br />
-              55°
-            </div>
-            <div class="col">
-              <i class="fa-solid fa-cloud"></i>
-              <br />
-              Wed <br />
-              55°
-            </div>
-            <div class="col">
-              <i class="fa-solid fa-cloud"></i> <br />
-              Thurs <br />
-              68°
-            </div>
-            <div class="col">
-              <i class="fa-solid fa-cloud-rain"></i> <br />
-              Fri <br />
-              67°
-            </div>
-            <div class="col">
-              <i class="fa-solid fa-sun"></i> <br />
-              Sat <br />
-              37°
-            </div>
-          </div>
+          <br />
         </div>
-        <br />
         <div class="openSource">
           <a
             href="https://github.com/eemorrison/weather-app"
