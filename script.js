@@ -30,6 +30,7 @@ function displayWeatherCondition(response) {
 
 humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML =  Math.round(response.data.wind.speed);
+iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function search(event) {
@@ -39,6 +40,9 @@ function search(event) {
     let descriptionElement = document.querySelector("#description");
     let humidityElement = document.querySelector("#humidityElement");
     let windElement = document.querySelector("#windElement");
+    let iconElement = document.querySelector("#iconElement");
+
+
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayWeatherCondition);
 
@@ -48,6 +52,7 @@ axios.get(apiUrl).then(displayWeatherCondition);
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 let searchForm = document.querySelector("#search-form");
+
 
 searchForm.addEventListener("submit", search);
 
