@@ -13,7 +13,13 @@
 }
 
 
+.iconTemp {
 
+    
+   
+
+
+}
 
 h1 {
     text-align: center;
@@ -36,7 +42,7 @@ h2 small {
     text-decoration: none;
     
 }
-.fahrenheit {
+.fahrenheitLink {
     text-decoration: none;
     color: #8064e9;
 }
@@ -58,6 +64,7 @@ p {
 h6 {
     font-family: "Montserrat", sans-serif;
     color: gray;
+    text-align: center;
 }
 .openSource {
         font-family: "Montserrat",

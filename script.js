@@ -56,8 +56,19 @@ let searchForm = document.querySelector("#search-form");
 
 searchForm.addEventListener("submit", search);
 
+function displayFahrenheitTemperature(event) {
+    event.preventDefault();
+    let fahrenheitTemperature = (14 * 9) / 5 +32;
+    alert(fahrenheitTemperature);
+}
+
+
 
 dateElement.innerHTML = formatDate(currentTime);
+
+
+let fahrenheitLink = document.querySelector("#fahrenheitLink");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 
 
