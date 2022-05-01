@@ -22,13 +22,46 @@ let day = days[dayIndex];
 return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#weather-forecast");
+    
+    let forecastHTML = `<div class="row">`;
+    forecastHTML = forecastHTML + `
+            
+             
+              <div class="col-2">
+                <i class="fa-solid fa-cloud"></i>
+                <br />
+                Tues <br />
+                <span class="weather-forecast-temperature-max">°55 </span>
+                |<span class="weather-forecast-temperature-min">°11</span>
+              </div>
+               `
+               l
+              
+              ;
+
+
+              
+
+
+    forecastHTML = forecastHTML +`</div>`;
+    
+
+    
+    forecastElement.innerHTML = forecastHTML;
+    
+}
+
 function displayWeatherCondition(response) {
     console.log(response.data.name);
+    celsiusTemperature = response.data.main.temp;
+
+
     document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature);
     descriptionElement.innerHTML = response.data.weather[0].description;
 
-    celsiusTemperature = response.data.main.temp;
 
 
 
@@ -46,6 +79,8 @@ function search(event) {
     let windElement = document.querySelector("#windElement");
     let iconElement = document.querySelector("#iconElement");
 
+    
+
 
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayWeatherCondition);
@@ -62,6 +97,7 @@ searchForm.addEventListener("submit", search);
 
 function displayFahrenheitTemperature(event) {
     event.preventDefault();
+    celsiusLink.classList.remove("#active");
     let fahrenheitTemperature = (celsiusTemperature * 9) / 5 +32;
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
@@ -70,7 +106,12 @@ function displayFahrenheitTemperature(event) {
 function displayCelsiusTemperature(event) {
 event.preventDefault();
 let temperatureElement = document.querySelector("#temperature");
-temperatureElement.innerHTML = Math.round(celsiusTemperature);
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+
+
+
+;
 }
 
 let celsiusTemperature = null;
@@ -84,6 +125,8 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsiusLink");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+displayForecast();
 
 
 
