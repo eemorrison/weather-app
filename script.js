@@ -11,13 +11,13 @@ function formatDate(date) {
 
   let dayIndex = date.getDay();
   let days = [
-    
-   
-    "Tues",
-    "Wed",
-    "Thurs",
-    "Fri",
-    "Sat",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
   let day = days[dayIndex];
 
@@ -27,13 +27,13 @@ function formatDate(date) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let days = [
-    
-     "Tues",
-    "Wed",
-    "Thurs",
-    "Fri",
-    "Sat",
-    
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
 
   return days[date.getDay()];
