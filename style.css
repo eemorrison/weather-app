@@ -45,20 +45,14 @@ h2 small {
     
 }
 
-.active {
-    color: #8064e9;
-    
-    text-decoration: none;
-}
 
-.active:hover {
-    text-decoration: none;
-}
+
+
 
 
 .fahrenheit {
-    text-decoration: none;
-    color: #8064e9;
+    text-align: center;
+    
 }
 .description {
     text-transform: capitalize;
@@ -76,11 +70,8 @@ p {
     padding: 10px;
 }
 
-h6 {
-    font-family: "Montserrat", sans-serif;
-    color: gray;
-    text-align: center;
-}
+
+
 .openSource {
         font-family: "Montserrat",
         sans-serif;
